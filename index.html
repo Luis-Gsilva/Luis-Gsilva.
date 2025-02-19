@@ -6,17 +6,25 @@
     <title>Document</title>
     <style>
         /* Estilos generales */
-  body {
+html, body {
+    height: 100%; /* Esto hace que el contenido ocupe toda la pantalla */
+    min-height: 100%; /* Asegura que la altura mínima sea suficiente */
+}
+
+body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
     background-image: url('Imagenes/Reform.jpg');
-    background-size: cover; /* Asegura que la imagen de fondo cubra toda la pantalla */
-    background-position: center center; /* Centra la imagen */
+    background-size: cover;
+    background-position: center center;
     color: white;
     text-align: center;
     position: relative;
+    overflow: auto; /* Esto asegura que se permita el desplazamiento */
 }
+
+
 
 
         h1, h2, h3, h4 {
