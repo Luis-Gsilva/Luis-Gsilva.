@@ -125,12 +125,42 @@ body {
                 transform: translateY(0);
             }
         }
+       a{
+        align-content: end;
+        background-color: #d20000 ;
+        color: #fbfbfb;
+        border-radius: 12%;
+       }
+       button {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #2a067c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #04087a;
+        }
+       
 
     </style>
 </head>
 <body>
+    <button id="myButton" onclick="changeColorAndRedirect()">photos</button>
+    <h1>Candidato a la Personería Estudiantil</h1> 
 
-    <h1>Candidato a la Personería Estudiantil</h1>
+
+ 
+
+
     <h2>Luis Silva</h2>
     <h3>#02</h3>
 
@@ -147,20 +177,23 @@ body {
     <p>Deberías votar por mí porque tengo muchas aspiraciones y ideas para mejorar nuestro entorno escolar. Quiero que ir al colegio sea algo mucho más divertido. Quiero que todas las ideas sean escuchadas y que todos seamos tenidos en cuenta.</p>
 
     <p>¿Qué dices? ¿Votas por mí?</p>
+    <a href="">photos</a>
 
-    <!-- Botón de interacción -->
-    <button class="vote-button" onclick="showThanksMessage()">Votar</button>
-
-    <!-- Mensaje de agradecimiento -->
-    <div class="thanks-message">
-        <p>¡Gracias por tu apoyo!</p>
-    </div>
+  
 
     <script>
-        function showThanksMessage() {
-            // Muestra el mensaje de agradecimiento
-            document.querySelector('.thanks-message').style.display = 'block';
+       
+        function changeColorAndRedirect() {
+            // Cambiar el color del botón al hacer clic
+            var button = document.getElementById('myButton');
+            button.style.backgroundColor = "#f44336"; // Cambia el color a rojo al presionar
+
+            // Redirigir a otra página después de 1 segundo
+            setTimeout(function() {
+                window.location.href = "file:///C:/Users/MI%20PC/Documents/Pagina%20Luis%20Silva%20Personeria/Html/pagina%202.html"; // Cambia la URL a donde quieras redirigir
+            }, 1000); // Espera 1 segundo antes de redirigir
         }
+    
     </script>
 
 </body>
